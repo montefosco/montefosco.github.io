@@ -1,0 +1,8 @@
+{
+  "name": "monte-fosco",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "npx esbuild src/main.js --bundle --outfile=src/bundle.js --alias:three=./vendor/three.module.js --format=iife"
+  }
+}

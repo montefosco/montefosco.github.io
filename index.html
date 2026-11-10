@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Monte Fosco — La crociata dei fanciulli</title>
+<meta name="description" content="Una presentazione interattiva in 3D low poly: la storia di Monte Fosco e della crociata dei fanciulli." />
+<meta name="theme-color" content="#070a0f" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="./src/style.css" />
+</head>
+<body>
+  <div id="app">
+    <canvas id="scene" aria-hidden="true"></canvas>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div class="topright">
+        <span class="counter"><span id="counterCurrent">01</span><span class="counter-sep">/</span><span id="counterTotal">12</span></span>
+      </div>
+    </header>
+
+    <div class="deck" id="deck" data-layout="cover">
+      <section class="card is-in" id="card" aria-live="polite">
+        <h1 class="title" id="title">Monte Fosco</h1>
+        <p class="text" id="text">Valentina Bandini, Giada Carniani,
+Carlo Boniotti, Lorenzo Rocca</p>
+      </section>
+    </div>
+
+    <div class="controls">
+      <div class="hint" id="hint"><span class="hint-dot" aria-hidden="true"></span><span id="hintText">clicca per iniziare</span></div>
+      <div class="nav">
+        <button class="nav-btn" id="prev" type="button" aria-label="Quadro precedente" title="Indietro (←)" disabled>←</button>
+        <button class="nav-btn" id="next" type="button" aria-label="Quadro successivo" title="Avanti (→)">→</button>
+      </div>
+    </div>
+
+    <div class="veil" id="veil" aria-hidden="true"></div>
+  </div>
+
+  <script src="./src/bundle.js"></script>
+</body>
+</html>
